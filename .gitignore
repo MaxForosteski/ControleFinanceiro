@@ -1,0 +1,39 @@
+# NetBeans
+nbproject/private/
+nbactions.xml
+nb-configuration.xml
+
+# Builds
+build/
+dist/
+nbbuild/
+target/
+
+# Dependências e pacotes gerados
+*.war
+*.ear
+*.jar
+*.class
+
+# Ferramentas externas
+.gradle/
+.mvn/
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Logs e arquivos temporários
+logs/
+*.log
+
+# Configurações sensíveis
+*.properties
+*.env
+*.keystore
+src/main/resources/META-INF/persistence.xml
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
