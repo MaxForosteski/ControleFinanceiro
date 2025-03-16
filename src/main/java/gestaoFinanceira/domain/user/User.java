@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package gestaoFinanceira.domain;
+package gestaoFinanceira.domain.user;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,19 +41,23 @@ public class User {
     @Column(name = "lastLogin",nullable = true)
     private Timestamp lastLogin;
     
+    @Column(name = "IsActive",nullable = false)
+    private boolean IsActive;
+    
     @Column(name = "createdOn",nullable = true)
     private Timestamp createdOn;
     
     @Column(name = "updateOn",nullable = true)
     private Timestamp updatedOn;
 
-    public User(Long id, String name, String username, String email, String password, Timestamp lastLogin, Timestamp createdOn, Timestamp updatedOn) {
+    public User(Long id, String name, String username, String email, String password, Timestamp lastLogin, Timestamp createdOn, Timestamp updatedOn,boolean IsActive) {
         this.id = id;
         this.name = name;
         this.username = username;
         this.email = email;
         this.password = password;
         this.lastLogin = lastLogin;
+        this.IsActive = IsActive;
         this.createdOn = createdOn;
         this.updatedOn = updatedOn;
     }
@@ -120,6 +124,14 @@ public class User {
 
     public void setUpdatedOn(Timestamp updatedOn) {
         this.updatedOn = updatedOn;
+    }
+
+    public boolean isIsActive() {
+        return IsActive;
+    }
+
+    public void setIsActive(boolean IsActive) {
+        this.IsActive = IsActive;
     }
     
     
