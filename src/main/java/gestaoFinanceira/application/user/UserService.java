@@ -32,5 +32,17 @@ public class UserService {
         return userRepository.userListAll();
     }
     
+    public void logicalDeleteUserWrapper(Long id){
+        userRepository.logicalDeleteUser(id);
+    }
+    
+    public void createUserWrapper(User user){
+        userRepository.createUser(user);
+    }
+    
+    public void updateUserWrapper(User updatedUser){
+        userRepository.updateUser(updatedUser);
+    }
+    
     
 }
